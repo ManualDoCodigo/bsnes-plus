@@ -33,6 +33,8 @@ public:
   bool debug;      //debugger sets this to true when entered to suspend emulation
   bool debugrun;   //debugger sets this to true to run emulation to a debug event
 
+  bool outOfFocus;
+
   clock_t clockTime;
   clock_t autosaveTime;
   clock_t screensaverTime;

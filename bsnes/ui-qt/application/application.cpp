@@ -223,6 +223,33 @@ void Application::run() {
     }
   }
 
+  if (outOfFocus == false) {
+    if ((!breakpointEditor->isActiveWindow()) && 
+    (!memoryEditor->isActiveWindow()) && 
+    (!propertiesViewer->isActiveWindow()) && 
+    (!ppuTabWindow->isActiveWindow()) && 
+    (!debugger->isActiveWindow())  && 
+    (!mainWindow->isActiveWindow()) ) {
+      outOfFocus = true;
+    }
+  }
+  else {
+    if ((breakpointEditor->isActiveWindow()) || 
+    (memoryEditor->isActiveWindow()) || 
+    (propertiesViewer->isActiveWindow()) || 
+    (ppuTabWindow->isActiveWindow()) || 
+    (debugger->isActiveWindow())  || 
+    (mainWindow->isActiveWindow()) ) {
+      outOfFocus = false;
+      breakpointEditor->activateWindow();
+      propertiesViewer->activateWindow();
+      ppuTabWindow->activateWindow();
+      debugger->activateWindow();
+      memoryEditor->activateWindow();
+      mainWindow->activateWindow();
+    }
+  }
+
   clock_t currentTime = clock();
   autosaveTime += currentTime - clockTime;
   screensaverTime += currentTime - clockTime;
@@ -249,6 +276,8 @@ Application::Application() : timer(0) {
   autopause    = false;
   debug        = false;
   debugrun     = false;
+
+  outOfFocus     = true;
 
   clockTime       = clock();
   autosaveTime    = 0;
