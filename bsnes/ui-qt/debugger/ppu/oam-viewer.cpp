@@ -91,6 +91,7 @@ OamViewer::OamViewer() {
   sidebarLayout->addRow("Zoom:", zoomCombo);
 
   autoUpdateBox = new QCheckBox("Auto update");
+  autoUpdateBox->setChecked(true);
   sidebarLayout->addRow(autoUpdateBox);
 
 

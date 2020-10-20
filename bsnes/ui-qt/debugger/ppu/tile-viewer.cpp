@@ -47,6 +47,7 @@ TileViewer::TileViewer() {
   sidebarLayout->addRow(zoomCombo, showGrid);
 
   autoUpdateBox = new QCheckBox("Auto update");
+  autoUpdateBox->setChecked(true);
   sidebarLayout->addRow("", autoUpdateBox);
 
 

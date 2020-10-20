@@ -106,6 +106,7 @@ PropertiesViewer::PropertiesViewer() {
 
   autoUpdateBox = new QCheckBox("Auto update");
   controlLayout->addWidget(autoUpdateBox);
+  autoUpdateBox->setChecked(true);
 
   refreshButton = new QPushButton("Refresh");
   controlLayout->addWidget(refreshButton);
