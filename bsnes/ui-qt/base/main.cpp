@@ -325,6 +325,8 @@ MainWindow::MainWindow() {
   connect(help_license, SIGNAL(triggered()), this, SLOT(showLicense()));
   connect(help_about, SIGNAL(triggered()), this, SLOT(showAbout()));
 
+  showDebugger();
+
   syncUi();
 }
 

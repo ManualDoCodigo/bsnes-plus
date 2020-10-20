@@ -6,6 +6,7 @@
 #include "qhexedit2/commands.cpp"
 
 QVector <MemoryEditor*> memoryEditors;
+MemoryEditor* memoryEditor;
 
 MemoryEditor::MemoryEditor() {
   setObjectName("memory-editor");

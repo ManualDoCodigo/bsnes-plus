@@ -86,5 +86,5 @@ private slots:
   void importMemory();
 };
 
-//extern MemoryEditor *memoryEditor;
+extern MemoryEditor *memoryEditor;
 extern QVector <MemoryEditor*> memoryEditors;
