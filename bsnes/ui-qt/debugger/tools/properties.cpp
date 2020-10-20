@@ -19,7 +19,7 @@ void PropertiesWidget::refresh() {
 }
 
 PropertiesWidget::PropertiesWidget(SNES::ChipDebugger &object) : object(object) {
-  setMinimumSize(480, 240);
+  setMinimumSize(300, 180);
 
   layout = new QVBoxLayout;
   setLayout(layout);
