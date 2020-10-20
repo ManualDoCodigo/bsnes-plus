@@ -109,6 +109,7 @@ public:
     string oamViewer;
     string cgramViewer;
     string debuggerOptions;
+    string ppuTabWindow;
   } geometry;
 
   bool load(const char *filename);

@@ -158,4 +158,5 @@ Configuration::Configuration() {
   attach(geometry.tilemapViewer    = "", "geometry.tilemapViewer");
   attach(geometry.oamViewer        = "", "geometry.oamViewer");
   attach(geometry.cgramViewer      = "", "geometry.cgramViewer");
+  attach(geometry.ppuTabWindow     = "", "geometry.ppuTabWindow");
 }
